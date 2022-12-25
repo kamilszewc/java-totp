@@ -1,0 +1,86 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'java-library'
+    id 'maven-publish' // To publish into github
+    id 'signing' // Required by maven central
+}
+
+group 'io.github.kamilszewc'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'commons-codec:commons-codec:1.15'
+
+    implementation 'org.apache.groovy:groovy:4.0.7'
+    testImplementation 'org.spockframework:spock-core:2.3-groovy-4.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = "$mavenCentralUser"
+                password = "$mavenCentralPassword"
+            }
+        }
+    }
+    publications {
+
+        mavenJava(MavenPublication) {
+            artifactId = 'totp'
+            from components.java
+            pom {
+                name = 'Tabulator'
+                description = 'Time-based One Time Password (TOTP) generator'
+                url = 'https://github.com/kamilszewc/totp'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'kszewc'
+                        name = "Kamil Szewc"
+                        email = 'kamil.szewc@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/kamilszewc/totp.git'
+                    developerConnection = 'scm:git:https://github.com/kamilszewc/totp.git'
+                    url = 'https://github.com/kamilszewc/totp.git'
+                }
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+    sign configurations.archives
+}
