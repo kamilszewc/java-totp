@@ -9,4 +9,12 @@ class TotpTest extends Specification {
         then:
         code == "783109"
     }
+
+    def "Check code validity for predefined time"() {
+        when:
+        def interval = Totp.getCodeValidityTime(0, 30, 1671980236);
+        println interval
+        then:
+        interval == 16
+    }
 }

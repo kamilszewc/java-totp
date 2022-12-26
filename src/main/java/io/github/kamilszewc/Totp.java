@@ -48,6 +48,14 @@ public class Totp {
         return calculateHotp(decodedSecret, challenge, codeLength, hashFunction);
     }
 
+    public static long getCodeValidityTime() {
+        return getCodeValidityTime(0, 30, getCurrentTimeStamp());
+    }
+
+    public static long getCodeValidityTime(long epoch, int timeStep, long timeStamp) {
+        return (timeStamp - epoch) % timeStep;
+    }
+
     private static String calculateHotp(
             byte[] decodedSecret,
             byte[] challenge,
