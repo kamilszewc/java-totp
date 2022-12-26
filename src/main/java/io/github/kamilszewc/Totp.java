@@ -102,7 +102,7 @@ public class Totp {
      * Returns the remaining code validity time (for 30 sec validity)
      * @return current code remaining validity time
      */
-    public static long getCodeValidityTime() {
+    public static long getCodeRemainingValidityTime() {
         return getCodeRemainingValidityTime(0, 30, getCurrentTimeStamp());
     }
 
