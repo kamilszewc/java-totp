@@ -114,7 +114,7 @@ public class Totp {
      * @return current code remaining validity time
      */
     public static long getCodeRemainingValidityTime(long epoch, int timeStep, long timeStamp) {
-        return (timeStamp - epoch) % timeStep;
+        return timeStep - (timeStamp - epoch) % timeStep;
     }
 
     private static String calculateHotp(
