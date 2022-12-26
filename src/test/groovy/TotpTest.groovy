@@ -15,6 +15,6 @@ class TotpTest extends Specification {
         def interval = Totp.getCodeRemainingValidityTime(0, 30, 1671980236);
         println interval
         then:
-        interval == 16
+        interval == 14
     }
 }
