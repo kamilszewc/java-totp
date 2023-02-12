@@ -2,15 +2,15 @@ plugins {
     id 'java'
     id 'groovy'
     id 'java-library'
-    id 'maven-publish' // To publish into github
-    id 'signing' // Required by maven central
+    id 'maven-publish'
+    id 'signing'
 }
 
 group 'io.github.kamilszewc'
-version '1.4'
+version '1.5'
 
-sourceCompatibility = '11'
-targetCompatibility = '11'
+sourceCompatibility = '9'
+targetCompatibility = '9'
 
 repositories {
     mavenCentral()
