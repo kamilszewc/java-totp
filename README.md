@@ -4,7 +4,7 @@
 
 The compiled libraries are deployed to Maven Central.
 
-Usage with maven:
+With maven:
 
 ```xml
 <dependency>
@@ -14,11 +14,13 @@ Usage with maven:
 </dependency>
 ```
 
-Usage with gradle:
+With gradle:
 
 ```groovy
 implementation 'io.github.kamilszewc:totp:1.5'
 ```
+
+It requires Java 9+.
 
 ## Basic usage
 
