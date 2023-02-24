@@ -47,8 +47,12 @@ publishing {
             name = "OSSRH"
             url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
-                username = "$mavenCentralUser"
-                password = "$mavenCentralPassword"
+                if (project.properties.containsKey('mavenCentralUser')) {
+                    username = "$mavenCentralUser"
+                }
+                if (project.properties.containsKey('mavenCentralPassword')) {
+                    password = "$mavenCentralPassword"
+                }
             }
         }
     }
