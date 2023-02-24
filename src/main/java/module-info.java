@@ -1,7 +1,7 @@
 /**
  * Totp module
  */
-module io.github.kamilszewc.totp {
+module com.computinglaboratory.totp {
     requires org.apache.commons.codec;
     exports com.computinglaboratory.totp;
 }
