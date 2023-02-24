@@ -3,5 +3,5 @@
  */
 module io.github.kamilszewc.totp {
     requires org.apache.commons.codec;
-    exports io.github.kamilszewc;
+    exports com.computinglaboratory.totp;
 }

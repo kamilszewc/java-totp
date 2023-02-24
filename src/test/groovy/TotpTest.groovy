@@ -1,4 +1,4 @@
-import io.github.kamilszewc.Totp
+import com.computinglaboratory.totp.Totp
 import spock.lang.Specification
 
 class TotpTest extends Specification {
@@ -12,7 +12,7 @@ class TotpTest extends Specification {
 
     def "Check code validity for predefined time"() {
         when:
-        def interval = Totp.getCodeRemainingValidityTime(0, 30, 1671980236);
+        def interval = Totp.getCodeRemainingValidityTime(0, 30, 1671980236)
         then:
         interval == 14
     }

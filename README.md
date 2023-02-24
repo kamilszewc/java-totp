@@ -8,7 +8,7 @@ With maven:
 
 ```xml
 <dependency>
-    <groupId>io.github.kamilszewc</groupId>
+    <groupId>com.computinglaboratory</groupId>
     <artifactId>totp</artifactId>
     <version>1.5</version>
 </dependency>
@@ -17,7 +17,7 @@ With maven:
 With gradle:
 
 ```groovy
-implementation 'io.github.kamilszewc:totp:1.5'
+implementation 'com.computinglaboratory:totp:2.0'
 ```
 
 It requires Java 9+.

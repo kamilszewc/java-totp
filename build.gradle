@@ -4,10 +4,11 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'signing'
+    id 'org.sonatype.gradle.plugins.scan' version '2.5.5'
 }
 
-group 'io.github.kamilszewc'
-version '1.5'
+group 'com.computinglaboratory'
+version '2.0'
 
 sourceCompatibility = '9'
 targetCompatibility = '9'
@@ -86,4 +87,10 @@ publishing {
 signing {
     sign publishing.publications.mavenJava
     sign configurations.archives
+}
+
+ossIndexAudit {
+    allConfigurations = false
+    useCache = false
+    outputFormat = 'DEFAULT'
 }

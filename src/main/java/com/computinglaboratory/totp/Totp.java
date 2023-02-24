@@ -1,4 +1,4 @@
-package io.github.kamilszewc;
+package com.computinglaboratory.totp;
 
 import org.apache.commons.codec.binary.Base32;
 
@@ -19,7 +19,7 @@ public class Totp {
     /**
      * Available hash functions
      */
-    public enum HashFunction {HMACSHA1, HMACSHA256, HMACSHA512};
+    public enum HashFunction {HMACSHA1, HMACSHA256, HMACSHA512}
 
     /**
      * Returns totp code
