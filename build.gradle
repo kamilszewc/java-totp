@@ -85,12 +85,53 @@ publishing {
                 }
             }
         }
+
+//        relocation(MavenPublication) {
+//            from components.java
+//            pom {
+//                groupId = 'io.github.kamilszewc'
+//                artifactId = 'totp'
+//                version = '5.0'
+//
+//                name = 'Totp'
+//                description = 'Time-based One Time Password (TOTP) generator'
+//                url = 'https://github.com/kamilszewc/totp'
+//                licenses {
+//                    license {
+//                        name = 'The Apache License, Version 2.0'
+//                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id = 'kszewc'
+//                        name = "Kamil Szewc"
+//                        email = 'kamil.szewc@gmail.com'
+//                    }
+//                }
+//                scm {
+//                    connection = 'scm:git:git://github.com/kamilszewc/totp.git'
+//                    developerConnection = 'scm:git:https://github.com/kamilszewc/totp.git'
+//                    url = 'https://github.com/kamilszewc/totp.git'
+//                }
+//
+//                distributionManagement {
+//                    relocation {
+//                        groupId = 'com.computinglaboratory'
+//                        artifactId = 'totp'
+//                        version = '5.0'
+//                        message = 'Project moved to com.computinglaboratory:totp'
+//                    }
+//                }
+//            }
+//        }
     }
 }
 
 signing {
     sign publishing.publications.mavenJava
     sign configurations.archives
+//    sign publishing.publications.relocation
 }
 
 ossIndexAudit {
