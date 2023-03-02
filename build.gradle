@@ -8,7 +8,7 @@ plugins {
 }
 
 group 'com.computinglaboratory'
-version '2.0'
+version '2.1'
 
 sourceCompatibility = '9'
 targetCompatibility = '9'
