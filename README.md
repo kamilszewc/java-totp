@@ -10,14 +10,14 @@ With maven:
 <dependency>
     <groupId>com.computinglaboratory</groupId>
     <artifactId>totp</artifactId>
-    <version>1.5</version>
+    <version>2.2</version>
 </dependency>
 ```
 
 With gradle:
 
 ```groovy
-implementation 'com.computinglaboratory:totp:2.0'
+implementation 'com.computinglaboratory:totp:2.2'
 ```
 
 It requires Java 9+.
