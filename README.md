@@ -8,16 +8,16 @@ With maven:
 
 ```xml
 <dependency>
-    <groupId>com.computinglaboratory</groupId>
+    <groupId>io.github.kamilszewc</groupId>
     <artifactId>totp</artifactId>
-    <version>2.2</version>
+    <version>2.3</version>
 </dependency>
 ```
 
 With gradle:
 
 ```groovy
-implementation 'com.computinglaboratory:totp:2.2'
+implementation 'io.github.kamilszewc:totp:2.2'
 ```
 
 It requires Java 9+.

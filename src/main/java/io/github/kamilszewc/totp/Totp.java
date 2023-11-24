@@ -1,4 +1,4 @@
-package com.computinglaboratory.totp;
+package io.github.kamilszewc.totp;
 
 import org.apache.commons.codec.binary.Base32;
 

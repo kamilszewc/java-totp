@@ -7,8 +7,8 @@ plugins {
     id 'org.sonatype.gradle.plugins.scan' version '2.5.5'
 }
 
-group 'com.computinglaboratory'
-version '2.2'
+group 'io.github.kamilszewc'
+version '2.3'
 
 sourceCompatibility = '9'
 targetCompatibility = '9'
@@ -21,9 +21,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 
-    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'commons-codec:commons-codec:1.16.0'
 
-    testImplementation 'org.apache.groovy:groovy:4.0.10'
+    testImplementation 'org.apache.groovy:groovy:4.0.15'
     testImplementation 'org.spockframework:spock-core:2.4-M1-groovy-4.0'
 }
 

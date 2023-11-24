@@ -1,4 +1,4 @@
-import com.computinglaboratory.totp.Totp
+import io.github.kamilszewc.totp.Totp
 import spock.lang.Specification
 
 class TotpTest extends Specification {
