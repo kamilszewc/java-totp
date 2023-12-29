@@ -19,7 +19,26 @@ public class Totp {
     /**
      * Available hash functions
      */
-    public enum HashFunction {HMACSHA1, HMACSHA256, HMACSHA512}
+    public enum HashFunction {
+        /**
+         * HMAC-SHA256
+         */
+        HMACSHA1,
+
+        /**
+         * HMAC-SHA256
+         */
+        HMACSHA256,
+
+        /**
+         * HMAC-SHA512
+         */
+        HMACSHA512}
+
+    /**
+     * Default constructor
+     */
+    public Totp() {}
 
     /**
      * Returns totp code

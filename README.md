@@ -10,17 +10,17 @@ With maven:
 <dependency>
     <groupId>io.github.kamilszewc</groupId>
     <artifactId>totp</artifactId>
-    <version>2.3</version>
+    <version>3.0</version>
 </dependency>
 ```
 
 With gradle:
 
 ```groovy
-implementation 'io.github.kamilszewc:totp:2.2'
+implementation 'io.github.kamilszewc:totp:3.0'
 ```
 
-It requires Java 9+.
+It requires Java 8.
 
 ## Basic usage
 
