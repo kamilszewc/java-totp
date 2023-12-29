@@ -108,7 +108,8 @@ public class Totp {
             int codeLength,
             HashFunction hashFunction) throws NoSuchAlgorithmException, IllegalArgumentException, InvalidKeyException {
 
-        long interval = Math.floorDiv(timeStamp - epoch, timeStep);
+        double intervalDouble = (double)(timeStamp - epoch) / timeStep;
+        long interval = (long)Math.floor(intervalDouble);
         byte[] challenge = ByteBuffer.allocate(8).putLong(interval).array();
 
         Base32 base32 = new Base32();
