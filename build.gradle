@@ -49,11 +49,11 @@ publishing {
             name = "OSSRH"
             url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
-                if (project.properties.containsKey('mavenCentralUser')) {
-                    username = "$mavenCentralUser"
+                if (project.properties.containsKey('mavenCentralTokenUser')) {
+                    username = "$mavenCentralTokenUser"
                 }
-                if (project.properties.containsKey('mavenCentralPassword')) {
-                    password = "$mavenCentralPassword"
+                if (project.properties.containsKey('mavenCentralTokenPassword')) {
+                    password = "$mavenCentralTokenPassword"
                 }
             }
         }
@@ -91,6 +91,7 @@ publishing {
 }
 
 signing {
+    useGpgCmd()
     sign publishing.publications.mavenJava
     sign configurations.archives
 //    sign publishing.publications.relocation
