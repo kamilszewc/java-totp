@@ -4,11 +4,11 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'signing'
-    id 'org.sonatype.gradle.plugins.scan' version '2.6.2'
+    id 'org.sonatype.gradle.plugins.scan' version '3.0.0'
 }
 
 group 'io.github.kamilszewc'
-version '6.0'
+version '6.1'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -23,10 +23,10 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
 
-    implementation 'commons-codec:commons-codec:1.16.0'
+    implementation 'commons-codec:commons-codec:1.18.0'
 
-    testImplementation 'org.apache.groovy:groovy:4.0.17'
-    testImplementation 'org.spockframework:spock-core:2.4-M1-groovy-4.0'
+    testImplementation 'org.apache.groovy:groovy:4.0.26'
+    testImplementation 'org.spockframework:spock-core:2.4-M5-groovy-4.0'
 }
 
 test {
